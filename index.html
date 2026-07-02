@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Invaders</title>
+
+    <link rel="stylesheet" href="menu.css">
+
+    <!-- Pixel Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="assets/videos/stars.mp4" type="video/mp4">
+    </video>
+
+    <!-- Dark Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Menu -->
+    <main class="menu">
+
+        <h1 class="title">
+            SPACE INVADERS
+        </h1>
+
+        <div class="ship-preview">
+
+            <p class="preview-title">
+                SELECTED SHIP
+            </p>
+
+            <img
+                id="selectedShipPreview"
+                src=""
+                alt="Selected Ship"
+            >
+
+        </div>
+        ``````````````````````
+        <div class="button-container">
+
+            <button id="playBtn" class="menu-btn">
+                PLAY
+            </button>
+
+            <button id="shipBtn" class="menu-btn">
+                CHOOSE SPACECRAFT
+            </button>
+
+            <button id="scoreBtn" class="menu-btn">
+                SCOREBOARD
+            </button>
+
+        </div>
+
+    </main>
+
+    <script src="menu.js"></script>
+
+</body>
+</html>

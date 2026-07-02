@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Space Invaders</title>
+
+    <link rel="stylesheet"
+          href="game.css">
+
+</head>
+
+<body>
+
+    <div id="hud">
+
+        <div id="score">
+            SCORE: 0
+        </div>
+
+        <div id="lives">
+            LIVES: 3
+        </div>
+
+    </div>
+
+    <video autoplay muted loop playsinline id="gameVideo">
+        <source src="assets/videos/space_background.mp4" type="video/mp4">
+    </video>
+
+    <canvas id="gameCanvas"></canvas>
+    <div id="countdown">
+            3
+    </div>
+
+    <script src="game.js"></script>
+</body>
+
+</html>

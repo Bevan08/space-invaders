@@ -1,0 +1,135 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Press Start 2P', cursive;
+    overflow-x:hidden;
+}
+
+#bg-video{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:-2;
+}
+
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.75);
+    z-index:-1;
+}
+
+.container{
+    min-height:100vh;
+    padding:30px;
+    text-align:center;
+}
+
+h1{
+    color:white;
+    margin-bottom:40px;
+
+    font-size:clamp(1.2rem,3vw,2rem);
+}
+
+.ship-grid{
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(180px,1fr));
+
+    gap:20px;
+
+    max-width:1200px;
+
+    margin:auto;
+}
+
+.ship-card{
+
+    background:#111;
+
+    border:4px solid white;
+
+    padding:20px;
+
+    cursor:pointer;
+
+    transition:0.2s;
+}
+
+.ship-card:hover{
+    transform:scale(1.05);
+}
+
+.ship-card img{
+
+    width:100%;
+
+    max-width:150px;
+
+    display:block;
+
+    margin:auto;
+}
+
+.selected{
+
+    border-color:yellow;
+
+    box-shadow:
+    0 0 20px yellow;
+}
+
+.button-row{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+}
+
+button{
+
+    padding:18px 30px;
+
+    font-family:'Press Start 2P', cursive;
+
+    border:none;
+
+    cursor:pointer;
+
+    background:white;
+
+    font-size:0.8rem;
+}
+
+@media(max-width:768px){
+
+    .ship-grid{
+
+        grid-template-columns:
+        repeat(2,1fr);
+    }
+
+    button{
+
+        width:90%;
+    }
+}

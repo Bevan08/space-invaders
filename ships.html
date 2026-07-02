@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Spacecraft</title>
+
+    <link rel="stylesheet" href="ships.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <video autoplay muted loop playsinline id="bg-video">
+        <source src="assets/videos/stars.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="container">
+
+        <h1>CHOOSE YOUR SHIP</h1>
+
+        <div id="shipGrid" class="ship-grid"></div>
+
+        <div class="button-row">
+
+            <button id="confirmBtn">
+                CONFIRM
+            </button>
+
+            <button id="backBtn">
+                BACK
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="ships.js"></script>
+
+</body>
+</html>
