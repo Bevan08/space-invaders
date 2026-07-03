@@ -167,9 +167,9 @@ button{
 
     h1{
 
-        margin-bottom:15px;
+        margin-bottom:8px;
 
-        font-size:1rem;
+        font-size:0.9rem;
 
     }
 
@@ -183,7 +183,7 @@ button{
 
         grid-template-rows:repeat(2,1fr);
 
-        gap:12px;
+        gap: 6px;
 
         max-width:100%;
 
@@ -193,13 +193,23 @@ button{
 
     .ship-card{
 
-        padding:10px;
+        padding:6px;
+
+        aspect-ratio:1/1;
+
+        display:flex;
+
+        justify-content:center;
+
+        align-items:center;
 
     }
 
     .ship-card img{
 
-        max-width:65px;
+        width:75%;
+
+        height:auto;
 
     }
 
@@ -211,21 +221,20 @@ button{
 
         align-items:center;
 
-        margin-top:15px;
+        margin-top:8px;
 
         width:100%;
 
     }
 
-    #backBtn{
-
-        width:180px;
-
-    }
-
+    #backBtn,
     #confirmBtn{
 
-        width:180px;
+        width:160px;
+
+        padding:14px 20px;
+
+        font-size:0.7rem;
 
     }
 
