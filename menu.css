@@ -184,64 +184,98 @@ body{
         );
 }
 
-/* =============================
-   ROTATE OVERLAY
-============================= */
+#rotateMessage {
 
-#rotateOverlay {
+    display: flex;
 
-    position: fixed;
-
-    top: 0;
-
-    left: 0;
-
-    width: 100vw;
-
-    height: 100vh;
-
-    background: rgba(0, 0, 0, 0.95);
-
-    display: none;
-
-    justify-content: center;
+    flex-direction: column;
 
     align-items: center;
 
-    z-index: 9999;
-
-}
-
-#rotateMessage {
-
-    text-align: center;
+    justify-content: center;
 
     color: white;
 
-    font-family: Arial, sans-serif;
+    text-align: center;
+
+    font-family: 'Press Start 2P', cursive;
+
+    gap: 30px;
 
 }
 
-#rotateMessage h1 {
+.rotateTitle {
+
+    font-size: 2rem;
+
+    color: #00FFFF;
+
+    text-shadow:
+
+        0 0 10px cyan,
+
+        0 0 20px cyan;
+
+}
+
+.rotatePhone {
+
+    font-size: 6rem;
+
+    animation:
+
+        phoneTilt
+
+        1.5s infinite ease-in-out;
+
+}
+
+.rotateArrow {
 
     font-size: 3rem;
 
-    margin-bottom: 20px;
+    color: #00FFFF;
 
 }
 
-#rotateMessage p {
+.rotateText {
 
-    font-size: 5rem;
+    font-size: 0.9rem;
 
-    margin: 20px 0;
+    line-height: 1.8;
 
 }
 
-#rotateMessage h2 {
+@keyframes phoneTilt {
 
-    font-size: 1.5rem;
+    0% {
 
-    font-weight: normal;
+        transform: rotate(0deg);
+
+    }
+
+    25% {
+
+        transform: rotate(-15deg);
+
+    }
+
+    50% {
+
+        transform: rotate(-90deg);
+
+    }
+
+    75% {
+
+        transform: rotate(-75deg);
+
+    }
+
+    100% {
+
+        transform: rotate(0deg);
+
+    }
 
 }
