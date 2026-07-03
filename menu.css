@@ -279,3 +279,45 @@ body{
     }
 
 }
+
+/* =============================
+   MOBILE LANDSCAPE MENU
+============================= */
+
+@media (max-width: 900px) and (orientation: landscape) {
+
+    .menu{
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        align-items:center;
+
+        padding:20px;
+
+    }
+
+    .title{
+
+        margin-bottom:25px;
+
+        font-size:1.6rem;
+
+    }
+
+    .menu-content{
+
+        display:flex;
+
+        align-items:center;
+
+        justify-content:center;
+
+        gap:60px;
+
+    }
+
+}
