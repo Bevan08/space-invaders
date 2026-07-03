@@ -183,3 +183,65 @@ body{
             0 0 10px white
         );
 }
+
+/* =============================
+   ROTATE OVERLAY
+============================= */
+
+#rotateOverlay {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100vw;
+
+    height: 100vh;
+
+    background: rgba(0, 0, 0, 0.95);
+
+    display: none;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 9999;
+
+}
+
+#rotateMessage {
+
+    text-align: center;
+
+    color: white;
+
+    font-family: Arial, sans-serif;
+
+}
+
+#rotateMessage h1 {
+
+    font-size: 3rem;
+
+    margin-bottom: 20px;
+
+}
+
+#rotateMessage p {
+
+    font-size: 5rem;
+
+    margin: 20px 0;
+
+}
+
+#rotateMessage h2 {
+
+    font-size: 1.5rem;
+
+    font-weight: normal;
+
+}

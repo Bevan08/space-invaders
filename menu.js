@@ -45,3 +45,53 @@ shipBtn.addEventListener("click", () => {
 scoreBtn.addEventListener("click", () => {
     alert("Scoreboard coming soon");
 });
+
+// =============================
+// ROTATE SCREEN
+// =============================
+
+function checkOrientation() {
+
+    const overlay =
+
+        document.getElementById("rotateOverlay");
+
+    const isMobile =
+
+        window.innerWidth <= 900;
+
+    const isPortrait =
+
+        window.innerHeight >
+
+        window.innerWidth;
+
+    if (
+
+        isMobile &&
+
+        isPortrait
+
+    ) {
+
+        overlay.style.display = "flex";
+
+    }
+
+    else {
+
+        overlay.style.display = "none";
+
+    }
+
+}
+
+checkOrientation();
+
+window.addEventListener(
+
+    "resize",
+
+    checkOrientation
+
+);
