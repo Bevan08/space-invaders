@@ -179,13 +179,15 @@ button{
 
         display:grid;
 
-        grid-template-columns:repeat(6,1fr);
+        grid-template-columns: repeat(6, minmax(0, 1fr));
 
         grid-template-rows:repeat(2,1fr);
 
         gap: 6px;
 
-        max-width:100%;
+        width:95%;
+        max-width:900px;
+        margin:0 auto;
 
         align-content:center;
 
@@ -193,7 +195,7 @@ button{
 
     .ship-card{
 
-        padding:6px;
+        padding:4px;
 
         aspect-ratio:1/1;
 
@@ -207,7 +209,7 @@ button{
 
     .ship-card img{
 
-        width:75%;
+        width:65%;
 
         height:auto;
 
