@@ -66,11 +66,24 @@ h1{
 
     cursor:pointer;
 
-    transition:0.2s;
+    transition:
+
+        transform 0.2s ease,
+
+        box-shadow 0.2s ease,
+
+        border-color 0.2s ease;
 }
 
 .ship-card:hover{
+
     transform:scale(1.05);
+
+    border-color:#66FFFF;
+
+    box-shadow:
+        0 0 10px rgba(0,255,255,0.5);
+
 }
 
 .ship-card img{
@@ -86,10 +99,20 @@ h1{
 
 .selected{
 
-    border-color:yellow;
+    border-color:#00FFFF;
 
     box-shadow:
-    0 0 20px yellow;
+        0 0 12px #00FFFF,
+        0 0 24px #00FFFF,
+        0 0 40px rgba(0,255,255,0.5);
+
+    transform:scale(1.08);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+
 }
 
 .button-row{
@@ -120,16 +143,90 @@ button{
     font-size:0.8rem;
 }
 
-@media(max-width:768px){
+/* =============================
+   MOBILE LANDSCAPE
+============================= */
+
+@media (max-width:900px) and (orientation:landscape){
+
+    .container{
+
+        height:100vh;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:space-between;
+
+        padding:15px;
+
+        overflow:hidden;
+
+    }
+
+    h1{
+
+        margin-bottom:15px;
+
+        font-size:1rem;
+
+    }
 
     .ship-grid{
 
-        grid-template-columns:
-        repeat(2,1fr);
+        flex:1;
+
+        display:grid;
+
+        grid-template-columns:repeat(6,1fr);
+
+        grid-template-rows:repeat(2,1fr);
+
+        gap:12px;
+
+        max-width:100%;
+
+        align-content:center;
+
     }
 
-    button{
+    .ship-card{
 
-        width:90%;
+        padding:10px;
+
     }
+
+    .ship-card img{
+
+        max-width:65px;
+
+    }
+
+    .button-row{
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:center;
+
+        margin-top:15px;
+
+        width:100%;
+
+    }
+
+    #backBtn{
+
+        width:180px;
+
+    }
+
+    #confirmBtn{
+
+        width:180px;
+
+    }
+
 }

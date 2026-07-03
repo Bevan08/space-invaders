@@ -316,7 +316,35 @@ body{
 
         justify-content:center;
 
-        gap:60px;
+        gap:90px;
+
+    }
+
+    .ship-preview {
+
+        margin-bottom: 0;
+
+    }
+
+    #selectedShipPreview {
+
+        width: 170px;
+
+    }
+
+    .button-container {
+
+        width: 340px;
+
+    }
+
+    .menu-btn {
+
+        width: 100%;
+
+        padding: 16px;
+
+        font-size: 0.75rem;
 
     }
 
