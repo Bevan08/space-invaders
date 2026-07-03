@@ -52,46 +52,31 @@ scoreBtn.addEventListener("click", () => {
 
 function checkOrientation() {
 
-    const overlay =
+    const overlay = document.getElementById("rotateOverlay");
 
-        document.getElementById("rotateOverlay");
+    if (!overlay) return;
 
-    const isMobile =
+    const isMobile = window.innerWidth <= 900;
 
-        window.innerWidth <= 900;
+    const isPortrait = window.innerHeight > window.innerWidth;
 
-    const isPortrait =
-
-        window.innerHeight >
-
-        window.innerWidth;
-
-    if (
-
-        isMobile &&
-
-        isPortrait
-
-    ) {
-
-        overlay.style.display = "flex";
-
-    }
-
-    else {
-
-        overlay.style.display = "none";
-
-    }
+    overlay.style.display =
+        (isMobile && isPortrait)
+        ? "flex"
+        : "none";
 
 }
 
-checkOrientation();
+window.addEventListener("DOMContentLoaded", () => {
 
-window.addEventListener(
+    checkOrientation();
 
-    "resize",
+    window.addEventListener(
 
-    checkOrientation
+        "resize",
 
-);
+        checkOrientation
+
+    );
+
+});
