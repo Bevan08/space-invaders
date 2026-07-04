@@ -159,7 +159,7 @@ button{
 
         justify-content:space-between;
 
-        padding:15px;
+        padding:8px 15px;
 
         overflow:hidden;
 
@@ -167,7 +167,7 @@ button{
 
     h1{
 
-        margin-bottom:8px;
+        margin-bottom:4px;
 
         font-size:0.9rem;
 
@@ -179,23 +179,27 @@ button{
 
         display:grid;
 
-        grid-template-columns: repeat(6, minmax(0, 1fr));
+        grid-template-columns:repeat(4,1fr);
 
-        grid-template-rows:repeat(2,1fr);
+        grid-template-rows:repeat(3,1fr);
 
-        gap: 6px;
+        gap:6px;
 
-        width:95%;
-        max-width:900px;
-        margin:0 auto;
+        width:100%;
 
-        align-content:center;
+        margin:auto;
+
+        justify-items:center;
+
+        align-items:center;
 
     }
 
     .ship-card{
 
         padding:4px;
+
+        width:85px;
 
         aspect-ratio:1/1;
 
@@ -205,17 +209,19 @@ button{
 
         align-items:center;
 
+        justify-self:center;
+
     }
 
     .ship-card img{
 
-        width:65%;
+        width:70%;
 
         height:auto;
 
     }
 
-    .button-row{
+    /*.button-row{
 
         display:flex;
 
@@ -238,6 +244,6 @@ button{
 
         font-size:0.7rem;
 
-    }
+    }*/
 
 }
