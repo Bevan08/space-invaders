@@ -14,6 +14,46 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
+const leftBtn = document.getElementById("leftBtn");
+const rightBtn = document.getElementById("rightBtn");
+const fireBtn = document.getElementById("fireBtn");
+
+function bindTouchButton(button, action){
+
+    if(!button) return;
+
+    button.addEventListener("touchstart",(e)=>{
+
+        e.preventDefault();
+
+        action(true);
+
+    });
+
+    button.addEventListener("touchend",(e)=>{
+
+        e.preventDefault();
+
+        action(false);
+
+    });
+
+    button.addEventListener("touchcancel",(e)=>{
+
+        e.preventDefault();
+
+        action(false);
+
+    });
+
+}
+
+bindTouchButton(leftBtn, value => touchLeft = value);
+
+bindTouchButton(rightBtn, value => touchRight = value);
+
+bindTouchButton(fireBtn, value => touchFire = value);
+
 // =============================
 // UI
 // =============================
@@ -295,6 +335,10 @@ let shockwave = {
     alpha: 1
 
 };
+
+let touchLeft = false;
+let touchRight = false;
+let touchFire = false;
 
 let playerExplosionAlpha = 1;
 
@@ -1853,13 +1897,13 @@ function update() {
 
     }
 
-    if (keys["ArrowLeft"] || keys["a"]) {
+    if (keys["ArrowLeft"] || keys["a"] || touchLeft) {
 
         player.x -= player.speed;
 
     }
 
-    if (keys["ArrowRight"] || keys["d"]) {
+    if (keys["ArrowRight"] || keys["d"] || touchRight) {
 
         player.x += player.speed;
 
@@ -2000,7 +2044,7 @@ function update() {
 
     // Continuous firing
 
-    if (keys[" "]) {
+    if (keys[" "] || touchFire) {
 
         shoot();
 

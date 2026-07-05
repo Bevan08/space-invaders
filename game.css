@@ -85,3 +85,87 @@ body{
 
     pointer-events:none;
 }
+
+/* ===========================
+   MOBILE CONTROLS
+=========================== */
+
+#mobileControls{
+
+    display:none;
+
+}
+
+@media (max-width:900px) and (orientation:landscape){
+
+    #mobileControls{
+
+        position:fixed;
+
+        bottom:15px;
+
+        left:0;
+
+        width:100%;
+
+        padding:0 20px;
+
+        display:flex;
+
+        justify-content:space-between;
+
+        align-items:flex-end;
+
+        pointer-events:none;
+
+        z-index:9999;
+
+    }
+
+    .leftControls{
+
+        display:flex;
+
+        gap:12px;
+
+        pointer-events:auto;
+
+    }
+
+    #leftBtn,
+    #rightBtn,
+    #fireBtn{
+
+        width:70px;
+
+        height:70px;
+
+        border:none;
+
+        border-radius:50%;
+
+        background:rgba(255,255,255,0.18);
+
+        backdrop-filter:blur(6px);
+
+        color:white;
+
+        font-size:30px;
+
+        font-weight:bold;
+
+        pointer-events:auto;
+
+        user-select:none;
+
+        touch-action:none;
+
+    }
+
+    #fireBtn{
+
+        background:rgba(255,80,80,.35);
+
+    }
+
+}
