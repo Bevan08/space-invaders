@@ -102,7 +102,7 @@ body{
 
         position:fixed;
 
-        bottom:15px;
+        bottom:8px;
 
         left:0;
 
@@ -119,6 +119,16 @@ body{
         pointer-events:none;
 
         z-index:9999;
+
+    }
+
+    body{
+
+        touch-action:none;
+
+        user-select:none;
+
+        -webkit-user-select:none;
 
     }
 
@@ -165,6 +175,22 @@ body{
     #fireBtn{
 
         background:rgba(255,80,80,.35);
+
+    }
+
+    /* ===========================
+    MOBILE HUD
+    =========================== */
+
+    #hud{
+
+        top:10px;
+
+        left:12px;
+
+        right:12px;
+
+        font-size:0.85rem;
 
     }
 
